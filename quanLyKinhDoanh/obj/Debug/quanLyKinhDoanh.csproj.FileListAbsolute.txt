@@ -1,0 +1,17 @@
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.mdf
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh_log.ldf
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.exe.config
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.exe
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.pdb
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.AssemblyReference.cache
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmChatLieu.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.Form1.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.Properties.Resources.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.GenerateResource.cache
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.CoreCompileInputs.cache
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.exe
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.pdb
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmNhanVien.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmKhachHang.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmHangHoa.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmHoaDonBan.resources
