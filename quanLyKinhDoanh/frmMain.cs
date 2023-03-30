@@ -7,21 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using quanLyKinhDoanh.Class;
 
 namespace quanLyKinhDoanh
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
+            Class.Functions.Connect();
 
         }
 
+        private void mnuThoat_Click(object sender, EventArgs e)
+        {
+            Class.Functions.Disconnect();
+            Application.Exit();
+        }
 
+        private void mnuChatLieu_Click(object sender, EventArgs e)
+        {
+            frmChatLieu frm = new frmChatLieu();
+            frm.ShowDialog(); 
+        }
+
+        private void mnuHangHoa_Click(object sender, EventArgs e)
+        {
+            frmHangHoa frm = new frmHangHoa();
+            frm.ShowDialog();
+        }
     }
 }

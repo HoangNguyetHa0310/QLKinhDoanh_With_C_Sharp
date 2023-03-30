@@ -193,7 +193,9 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmChatLieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Danh Sách Chất Liệu";
+            this.Load += new System.EventHandler(this.frmChatLieu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

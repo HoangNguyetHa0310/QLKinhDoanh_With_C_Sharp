@@ -324,6 +324,7 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.dgvHang);
             this.Controls.Add(this.panel1);
             this.Name = "frmHangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmHangHoa";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
