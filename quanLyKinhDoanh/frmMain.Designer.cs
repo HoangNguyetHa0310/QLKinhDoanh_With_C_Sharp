@@ -57,15 +57,15 @@ namespace quanLyKinhDoanh
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFile,
-            this.toolStripMenuItem1,
             this.mnuDanhMuc,
+            this.toolStripMenuItem1,
             this.mnuHoaDon,
             this.mnuTimKiem,
             this.mnuBaoCao,
             this.mnuTroGiup});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1129, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1575, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,13 +112,13 @@ namespace quanLyKinhDoanh
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(142, 22);
+            this.mnuNhanVien.Size = new System.Drawing.Size(180, 22);
             this.mnuNhanVien.Text = "&Nhân Viên ";
             // 
             // mnuKhachHang
             // 
             this.mnuKhachHang.Name = "mnuKhachHang";
-            this.mnuKhachHang.Size = new System.Drawing.Size(142, 22);
+            this.mnuKhachHang.Size = new System.Drawing.Size(180, 22);
             this.mnuKhachHang.Text = "&Khách Hàng ";
             // 
             // mnuHangHoa
@@ -139,7 +139,7 @@ namespace quanLyKinhDoanh
             // mnuHoaDonBan
             // 
             this.mnuHoaDonBan.Name = "mnuHoaDonBan";
-            this.mnuHoaDonBan.Size = new System.Drawing.Size(147, 22);
+            this.mnuHoaDonBan.Size = new System.Drawing.Size(180, 22);
             this.mnuHoaDonBan.Text = "&Hóa Đơn Bán ";
             // 
             // mnuTimKiem
@@ -155,19 +155,19 @@ namespace quanLyKinhDoanh
             // mnuFindHoaDon
             // 
             this.mnuFindHoaDon.Name = "mnuFindHoaDon";
-            this.mnuFindHoaDon.Size = new System.Drawing.Size(142, 22);
+            this.mnuFindHoaDon.Size = new System.Drawing.Size(180, 22);
             this.mnuFindHoaDon.Text = "&Hóa Đơn ";
             // 
             // mnuFindHang
             // 
             this.mnuFindHang.Name = "mnuFindHang";
-            this.mnuFindHang.Size = new System.Drawing.Size(142, 22);
+            this.mnuFindHang.Size = new System.Drawing.Size(180, 22);
             this.mnuFindHang.Text = "&Hàng ";
             // 
             // mnuFindKhachHang
             // 
             this.mnuFindKhachHang.Name = "mnuFindKhachHang";
-            this.mnuFindKhachHang.Size = new System.Drawing.Size(142, 22);
+            this.mnuFindKhachHang.Size = new System.Drawing.Size(180, 22);
             this.mnuFindKhachHang.Text = "&Khách Hàng ";
             // 
             // mnuBaoCao
@@ -182,13 +182,13 @@ namespace quanLyKinhDoanh
             // mnuBCHangTon
             // 
             this.mnuBCHangTon.Name = "mnuBCHangTon";
-            this.mnuBCHangTon.Size = new System.Drawing.Size(130, 22);
+            this.mnuBCHangTon.Size = new System.Drawing.Size(180, 22);
             this.mnuBCHangTon.Text = "&Hàng tồn ";
             // 
             // mnuBCDoanhThu
             // 
             this.mnuBCDoanhThu.Name = "mnuBCDoanhThu";
-            this.mnuBCDoanhThu.Size = new System.Drawing.Size(130, 22);
+            this.mnuBCDoanhThu.Size = new System.Drawing.Size(180, 22);
             this.mnuBCDoanhThu.Text = "&Doanh thu";
             // 
             // mnuTroGiup
@@ -203,21 +203,22 @@ namespace quanLyKinhDoanh
             // mnuHienTroGiup
             // 
             this.mnuHienTroGiup.Name = "mnuHienTroGiup";
-            this.mnuHienTroGiup.Size = new System.Drawing.Size(126, 22);
+            this.mnuHienTroGiup.Size = new System.Drawing.Size(180, 22);
             this.mnuHienTroGiup.Text = "&Trợ Giúp ";
             // 
             // mnuNhanXet
             // 
             this.mnuNhanXet.Name = "mnuNhanXet";
-            this.mnuNhanXet.Size = new System.Drawing.Size(126, 22);
+            this.mnuNhanXet.Size = new System.Drawing.Size(180, 22);
             this.mnuNhanXet.Text = "&Nhận Xét ";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 552);
+            this.ClientSize = new System.Drawing.Size(1575, 542);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Quan Lý Kinh Doanh ";

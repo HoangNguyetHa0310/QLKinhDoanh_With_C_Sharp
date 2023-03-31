@@ -3,7 +3,6 @@ D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\D
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.exe.config
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.exe
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\bin\Debug\quanLyKinhDoanh.pdb
-D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.AssemblyReference.cache
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmChatLieu.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.Properties.Resources.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.GenerateResource.cache
@@ -16,3 +15,4 @@ D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\D
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmHoaDonBan.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmTimHDBan.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmMain.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.AssemblyReference.cache

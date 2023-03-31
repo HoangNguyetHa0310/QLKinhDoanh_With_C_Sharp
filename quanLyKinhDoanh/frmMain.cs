@@ -41,5 +41,6 @@ namespace quanLyKinhDoanh
             frmHangHoa frm = new frmHangHoa();
             frm.ShowDialog();
         }
+
     }
 }

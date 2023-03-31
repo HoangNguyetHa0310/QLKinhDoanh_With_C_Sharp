@@ -16,12 +16,17 @@ namespace quanLyKinhDoanh.Class
 
         public static void Connect()
         {
-            con = new SqlConnection();
-            con.ConnectionString = Properties.Settings.Default.quanLyKinhDoanhConnectionString;
+            // con = new SqlConnection();
+            string connectString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\quanLyKinhDoanh.mdf;
+             Integrated Security=True;Connect Timeout=30";
+            con = new SqlConnection(connectString);
+            
+            
             // kiểm tra phươn thức kết nối 
 
             if (con.State != ConnectionState.Open)
             {
+                // mở cổng 
                 con.Open();
                 MessageBox.Show("Kết nối thành công !");
             }
@@ -29,9 +34,12 @@ namespace quanLyKinhDoanh.Class
             {
                 MessageBox.Show("Kết nối không thành công ! ");
             }
+            
+ 
+
         }
-         //  Dừng việc kết nối 
-         public static void Disconnect ()
+        //  Dừng việc kết nối 
+        public static void Disconnect ()
          {
             if (con.State == ConnectionState.Open)
             {
@@ -51,5 +59,42 @@ namespace quanLyKinhDoanh.Class
             return table;
         }
 
-    }
+        // phương thức thực thi câu lệnh ísnert  
+
+        public static void RunSQL (string sql)
+        {
+            SqlCommand cmd;
+            cmd = new SqlCommand();
+            cmd.Connection = con; // keet noi 
+            cmd.CommandText = sql;// cau lenhj sql
+            try
+            {
+                cmd.ExecuteNonQuery(); // thuc th cau lengj sql 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            cmd.Dispose(); // giai phong bi nho
+            cmd = null;
+        }
+
+        // ham kiem tra 
+        public static bool CheckKey (string sql)
+        {
+            SqlDataAdapter dap = new SqlDataAdapter(sql, con);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                return true;
+
+            }else
+            {
+                return false;
+            }
+        }
+
+
+     }
 }

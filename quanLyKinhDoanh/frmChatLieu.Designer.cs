@@ -56,6 +56,7 @@ namespace quanLyKinhDoanh
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -65,6 +66,7 @@ namespace quanLyKinhDoanh
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -74,6 +76,7 @@ namespace quanLyKinhDoanh
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnBoqua
             // 
@@ -83,6 +86,7 @@ namespace quanLyKinhDoanh
             this.btnBoqua.TabIndex = 4;
             this.btnBoqua.Text = "\tBỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // btnLuu
             // 
@@ -92,6 +96,7 @@ namespace quanLyKinhDoanh
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnDong
             // 
@@ -101,6 +106,7 @@ namespace quanLyKinhDoanh
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // panel1
             // 
@@ -154,6 +160,7 @@ namespace quanLyKinhDoanh
             this.txtMaChatLieu.Name = "txtMaChatLieu";
             this.txtMaChatLieu.Size = new System.Drawing.Size(414, 20);
             this.txtMaChatLieu.TabIndex = 0;
+            this.txtMaChatLieu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMaChatLieu_KeyUp);
             // 
             // label3
             // 
@@ -183,6 +190,7 @@ namespace quanLyKinhDoanh
             this.dgvChatLieu.Name = "dgvChatLieu";
             this.dgvChatLieu.Size = new System.Drawing.Size(1151, 312);
             this.dgvChatLieu.TabIndex = 1;
+            this.dgvChatLieu.Click += new System.EventHandler(this.dgvChatLieu_Click);
             // 
             // frmChatLieu
             // 

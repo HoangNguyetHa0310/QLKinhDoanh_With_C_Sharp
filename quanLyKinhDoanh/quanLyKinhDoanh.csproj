@@ -151,10 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="quanLyKinhDoanh.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="quanLyKinhDoanh_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>quanLyKinhDoanh.mdf</DependentUpon>
     </Content>
   </ItemGroup>
