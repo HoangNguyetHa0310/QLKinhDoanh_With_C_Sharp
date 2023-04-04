@@ -16,3 +16,5 @@ D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\D
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmTimHDBan.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmMain.resources
 D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.AssemblyReference.cache
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.frmDangNhap.resources
+D:\bài tập môn C#\bài tập về nhà\quanLyKinhDoanh\quanLyKinhDoanh\obj\Debug\quanLyKinhDoanh.csproj.ResolveComReference.cache

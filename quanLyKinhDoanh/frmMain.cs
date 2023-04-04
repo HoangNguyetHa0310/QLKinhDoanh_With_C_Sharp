@@ -42,5 +42,30 @@ namespace quanLyKinhDoanh
             frm.ShowDialog();
         }
 
+        private void mnuNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frm  = new frmNhanVien();
+            frm.ShowDialog();
+
+        }
+
+        private void mnuKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            frm.ShowDialog();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            frmDangNhap frm = new frmDangNhap();
+            frm.ShowDialog();
+        }
+
+        private void mnuHoaDonBan_Click(object sender, EventArgs e)
+        {
+            frmHoaDonBan frm = new frmHoaDonBan();
+            frm.ShowDialog();
+        }
     }
 }
+

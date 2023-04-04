@@ -30,7 +30,17 @@ namespace quanLyKinhDoanh
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnBoqua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.mtbDienThoai = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chkGioiTinh = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
@@ -42,16 +52,6 @@ namespace quanLyKinhDoanh
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.chkGioiTinh = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.mtbDienThoai = new System.Windows.Forms.MaskedTextBox();
-            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnBoqua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -70,6 +70,66 @@ namespace quanLyKinhDoanh
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1207, 80);
             this.panel1.TabIndex = 2;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(136, 17);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(105, 46);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm ";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.Location = new System.Drawing.Point(965, 17);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(105, 46);
+            this.btnDong.TabIndex = 5;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(635, 17);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(105, 46);
+            this.btnLuu.TabIndex = 3;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnBoqua
+            // 
+            this.btnBoqua.Location = new System.Drawing.Point(804, 17);
+            this.btnBoqua.Name = "btnBoqua";
+            this.btnBoqua.Size = new System.Drawing.Size(105, 46);
+            this.btnBoqua.TabIndex = 4;
+            this.btnBoqua.Text = "\tBỏ qua";
+            this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(294, 17);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(105, 46);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(460, 17);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(105, 46);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // panel2
             // 
@@ -92,7 +152,44 @@ namespace quanLyKinhDoanh
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1207, 154);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(898, 123);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.dtpNgaySinh.TabIndex = 5;
+            // 
+            // mtbDienThoai
+            // 
+            this.mtbDienThoai.Location = new System.Drawing.Point(898, 75);
+            this.mtbDienThoai.Mask = "(999) 000-0000";
+            this.mtbDienThoai.Name = "mtbDienThoai";
+            this.mtbDienThoai.Size = new System.Drawing.Size(198, 20);
+            this.mtbDienThoai.TabIndex = 4;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(223, 126);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(40, 17);
+            this.checkBox2.TabIndex = 4;
+            this.checkBox2.Text = "Nữ";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // chkGioiTinh
+            // 
+            this.chkGioiTinh.AutoSize = true;
+            this.chkGioiTinh.Checked = true;
+            this.chkGioiTinh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGioiTinh.Location = new System.Drawing.Point(143, 126);
+            this.chkGioiTinh.Name = "chkGioiTinh";
+            this.chkGioiTinh.Size = new System.Drawing.Size(51, 17);
+            this.chkGioiTinh.TabIndex = 2;
+            this.chkGioiTinh.Text = "Nam ";
+            this.chkGioiTinh.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -190,98 +287,6 @@ namespace quanLyKinhDoanh
             this.dgvNhanVien.Size = new System.Drawing.Size(1207, 339);
             this.dgvNhanVien.TabIndex = 1;
             // 
-            // chkGioiTinh
-            // 
-            this.chkGioiTinh.AutoSize = true;
-            this.chkGioiTinh.Checked = true;
-            this.chkGioiTinh.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGioiTinh.Location = new System.Drawing.Point(143, 126);
-            this.chkGioiTinh.Name = "chkGioiTinh";
-            this.chkGioiTinh.Size = new System.Drawing.Size(51, 17);
-            this.chkGioiTinh.TabIndex = 2;
-            this.chkGioiTinh.Text = "Nam ";
-            this.chkGioiTinh.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(223, 126);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(40, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Nữ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // mtbDienThoai
-            // 
-            this.mtbDienThoai.Location = new System.Drawing.Point(898, 75);
-            this.mtbDienThoai.Mask = "(999) 000-0000";
-            this.mtbDienThoai.Name = "mtbDienThoai";
-            this.mtbDienThoai.Size = new System.Drawing.Size(198, 20);
-            this.mtbDienThoai.TabIndex = 4;
-            // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(898, 123);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
-            this.dtpNgaySinh.TabIndex = 5;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(136, 17);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(105, 46);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm ";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnDong
-            // 
-            this.btnDong.Location = new System.Drawing.Point(965, 17);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(105, 46);
-            this.btnDong.TabIndex = 5;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(635, 17);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(105, 46);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnBoqua
-            // 
-            this.btnBoqua.Location = new System.Drawing.Point(804, 17);
-            this.btnBoqua.Name = "btnBoqua";
-            this.btnBoqua.Size = new System.Drawing.Size(105, 46);
-            this.btnBoqua.TabIndex = 4;
-            this.btnBoqua.Text = "\tBỏ qua";
-            this.btnBoqua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(294, 17);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(105, 46);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(460, 17);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(105, 46);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +297,8 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.panel1);
             this.Name = "frmNhanVien";
             this.Text = "DANH MỤC NHÂN VIÊN ";
+            this.Load += new System.EventHandler(this.frmNhanVien_Load);
+            this.Click += new System.EventHandler(this.frmNhanVien_Click);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

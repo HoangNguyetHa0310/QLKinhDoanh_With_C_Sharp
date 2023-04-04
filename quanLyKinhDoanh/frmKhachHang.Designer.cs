@@ -167,6 +167,7 @@ namespace quanLyKinhDoanh
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDong
             // 
@@ -176,6 +177,7 @@ namespace quanLyKinhDoanh
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click_1);
             // 
             // btnLuu
             // 
@@ -185,6 +187,7 @@ namespace quanLyKinhDoanh
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnBoqua
             // 
@@ -194,6 +197,7 @@ namespace quanLyKinhDoanh
             this.btnBoqua.TabIndex = 4;
             this.btnBoqua.Text = "\tBỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // btnXoa
             // 
@@ -203,6 +207,7 @@ namespace quanLyKinhDoanh
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -212,6 +217,7 @@ namespace quanLyKinhDoanh
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // dgvKhachHang
             // 
@@ -221,6 +227,7 @@ namespace quanLyKinhDoanh
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(1189, 352);
             this.dgvKhachHang.TabIndex = 1;
+            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
             // 
             // frmKhachHang
             // 
@@ -232,6 +239,7 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.panel1);
             this.Name = "frmKhachHang";
             this.Text = "frmKhachHang";
+            this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
