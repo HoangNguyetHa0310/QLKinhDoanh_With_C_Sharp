@@ -21,13 +21,12 @@ namespace quanLyKinhDoanh
         private void frmMain_Load(object sender, EventArgs e)
         {
             Class.Functions.Connect();
-
         }
 
         private void mnuThoat_Click(object sender, EventArgs e)
         {
-            Class.Functions.Disconnect();
             Application.Exit();
+
         }
 
         private void mnuChatLieu_Click(object sender, EventArgs e)
@@ -64,6 +63,24 @@ namespace quanLyKinhDoanh
         private void mnuHoaDonBan_Click(object sender, EventArgs e)
         {
             frmHoaDonBan frm = new frmHoaDonBan();
+            frm.ShowDialog();
+        }
+
+        private void mnuFindHoaDon_Click(object sender, EventArgs e)
+        {
+            frmTimHDBan frm = new frmTimHDBan();
+            frm.ShowDialog();
+        }
+
+        private void mnuFindHang_Click(object sender, EventArgs e)
+        {
+            frmHangHoa frm = new frmHangHoa();
+            frm.ShowDialog();
+        }
+
+        private void mnuFindKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
             frm.ShowDialog();
         }
     }

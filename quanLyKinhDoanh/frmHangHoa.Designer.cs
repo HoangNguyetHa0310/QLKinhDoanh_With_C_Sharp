@@ -30,14 +30,18 @@ namespace quanLyKinhDoanh
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMo = new System.Windows.Forms.Button();
+            this.picAnh = new System.Windows.Forms.PictureBox();
             this.cboMaChatLieu = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtAnh = new System.Windows.Forms.TextBox();
             this.txtDonGiaBan = new System.Windows.Forms.TextBox();
             this.txtDonGiaNhap = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtTenHang = new System.Windows.Forms.TextBox();
             this.txtMaHang = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,20 +60,25 @@ namespace quanLyKinhDoanh
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnMo);
+            this.panel1.Controls.Add(this.picAnh);
             this.panel1.Controls.Add(this.cboMaChatLieu);
             this.panel1.Controls.Add(this.txtGhiChu);
+            this.panel1.Controls.Add(this.txtAnh);
             this.panel1.Controls.Add(this.txtDonGiaBan);
             this.panel1.Controls.Add(this.txtDonGiaNhap);
             this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.txtTenHang);
             this.panel1.Controls.Add(this.txtMaHang);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -83,6 +92,24 @@ namespace quanLyKinhDoanh
             this.panel1.Size = new System.Drawing.Size(1222, 247);
             this.panel1.TabIndex = 0;
             // 
+            // btnMo
+            // 
+            this.btnMo.Location = new System.Drawing.Point(882, 34);
+            this.btnMo.Name = "btnMo";
+            this.btnMo.Size = new System.Drawing.Size(64, 33);
+            this.btnMo.TabIndex = 8;
+            this.btnMo.Text = "Mở ";
+            this.btnMo.UseVisualStyleBackColor = true;
+            this.btnMo.Click += new System.EventHandler(this.btnMo_Click);
+            // 
+            // picAnh
+            // 
+            this.picAnh.Location = new System.Drawing.Point(952, 34);
+            this.picAnh.Name = "picAnh";
+            this.picAnh.Size = new System.Drawing.Size(229, 189);
+            this.picAnh.TabIndex = 7;
+            this.picAnh.TabStop = false;
+            // 
             // cboMaChatLieu
             // 
             this.cboMaChatLieu.FormattingEnabled = true;
@@ -93,11 +120,19 @@ namespace quanLyKinhDoanh
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(800, 23);
+            this.txtGhiChu.Location = new System.Drawing.Point(670, 153);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(300, 204);
+            this.txtGhiChu.Size = new System.Drawing.Size(206, 86);
             this.txtGhiChu.TabIndex = 6;
+            // 
+            // txtAnh
+            // 
+            this.txtAnh.Location = new System.Drawing.Point(670, 34);
+            this.txtAnh.Multiline = true;
+            this.txtAnh.Name = "txtAnh";
+            this.txtAnh.Size = new System.Drawing.Size(206, 91);
+            this.txtAnh.TabIndex = 6;
             // 
             // txtDonGiaBan
             // 
@@ -143,14 +178,23 @@ namespace quanLyKinhDoanh
             this.label6.TabIndex = 0;
             this.label6.Text = "Đơn giá bán ";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(598, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ghi chú ";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(728, 43);
+            this.label8.Location = new System.Drawing.Point(598, 54);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Ghi chú ";
+            this.label8.Text = "Ảnh ";
             // 
             // label5
             // 
@@ -193,7 +237,7 @@ namespace quanLyKinhDoanh
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(463, 9);
+            this.label9.Location = new System.Drawing.Point(471, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(273, 31);
             this.label9.TabIndex = 0;
@@ -312,6 +356,7 @@ namespace quanLyKinhDoanh
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // frmHangHoa
             // 
@@ -327,6 +372,7 @@ namespace quanLyKinhDoanh
             this.Load += new System.EventHandler(this.frmHangHoa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -357,9 +403,13 @@ namespace quanLyKinhDoanh
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDonGiaBan;
         private System.Windows.Forms.TextBox txtDonGiaNhap;
-        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtAnh;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button txtTimKiem;
+        private System.Windows.Forms.Button btnMo;
+        private System.Windows.Forms.PictureBox picAnh;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.Label label7;
     }
 }

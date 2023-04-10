@@ -50,6 +50,7 @@ namespace quanLyKinhDoanh
             this.mnuHienTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNhanXet = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -76,7 +77,7 @@ namespace quanLyKinhDoanh
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 30);
-            this.menuStrip1.Size = new System.Drawing.Size(129, 580);
+            this.menuStrip1.Size = new System.Drawing.Size(129, 559);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,18 +170,21 @@ namespace quanLyKinhDoanh
             this.mnuFindHoaDon.Name = "mnuFindHoaDon";
             this.mnuFindHoaDon.Size = new System.Drawing.Size(205, 34);
             this.mnuFindHoaDon.Text = "&Hóa Đơn ";
+            this.mnuFindHoaDon.Click += new System.EventHandler(this.mnuFindHoaDon_Click);
             // 
             // mnuFindHang
             // 
             this.mnuFindHang.Name = "mnuFindHang";
             this.mnuFindHang.Size = new System.Drawing.Size(205, 34);
             this.mnuFindHang.Text = "&Hàng ";
+            this.mnuFindHang.Click += new System.EventHandler(this.mnuFindHang_Click);
             // 
             // mnuFindKhachHang
             // 
             this.mnuFindKhachHang.Name = "mnuFindKhachHang";
             this.mnuFindKhachHang.Size = new System.Drawing.Size(205, 34);
             this.mnuFindKhachHang.Text = "&Khách Hàng ";
+            this.mnuFindKhachHang.Click += new System.EventHandler(this.mnuFindKhachHang_Click);
             // 
             // mnuBaoCao
             // 
@@ -228,11 +232,20 @@ namespace quanLyKinhDoanh
             // 
             // btnDangXuat
             // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDangXuat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngXuấtToolStripMenuItem});
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(116, 34);
             this.btnDangXuat.Text = "&Đăng Xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(184, 34);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // toolStripMenuItem1
             // 
@@ -245,7 +258,7 @@ namespace quanLyKinhDoanh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 580);
+            this.panel1.Size = new System.Drawing.Size(135, 559);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -256,7 +269,7 @@ namespace quanLyKinhDoanh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(135, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1010, 580);
+            this.panel2.Size = new System.Drawing.Size(993, 559);
             this.panel2.TabIndex = 4;
             // 
             // frmMain
@@ -266,14 +279,13 @@ namespace quanLyKinhDoanh
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = global::quanLyKinhDoanh.Properties.Resources.anhBackGroundFormMain;
-            this.ClientSize = new System.Drawing.Size(1145, 580);
+            this.ClientSize = new System.Drawing.Size(1128, 559);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "Quan Lý Kinh Doanh ";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -309,6 +321,7 @@ namespace quanLyKinhDoanh
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }
 

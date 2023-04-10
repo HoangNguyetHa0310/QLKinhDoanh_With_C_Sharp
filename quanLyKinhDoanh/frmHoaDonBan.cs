@@ -88,7 +88,7 @@ namespace quanLyKinhDoanh
             cboMaKhach.Text = Functions.GetFieldValues(str);
             str = "SELECT TongTien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             txtTongTien.Text = Functions.GetFieldValues(str);
-            lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(txtTongTien.Text);
+            lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChuoi(double.Parse(txtTongTien.Text));
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace quanLyKinhDoanh
                     return;
                 }
                 sql = "INSERT INTO tblHDBan(MaHDBan, NgayBan, MaNhanVien, MaKhach, TongTien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
-                        Functions.ConvertTimeTo24(txtNgayBan.Text.Trim()) + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
+                        txtNgayBan.Value + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
                         cboMaKhach.SelectedValue + "'," + txtTongTien.Text + ")";
                 Functions.RunSQL(sql);
             }
@@ -198,7 +198,7 @@ namespace quanLyKinhDoanh
             sql = "UPDATE tblHDBan SET TongTien =" + Tongmoi + " WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             Functions.RunSQL(sql);
             txtTongTien.Text = Tongmoi.ToString();
-            lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(Tongmoi.ToString());
+            lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChuoi(double.Parse(Tongmoi.ToString()));
             ResetValuesHang();
             btnXoa.Enabled = true;
             btnThem.Enabled = true;
@@ -241,7 +241,7 @@ namespace quanLyKinhDoanh
                 sql = "UPDATE tblHDBan SET TongTien =" + tongmoi + " WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
                 Functions.RunSQL(sql);
                 txtTongTien.Text = tongmoi.ToString();
-                lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(tongmoi.ToString());
+                lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChuoi(double.Parse(tongmoi.ToString()));
                 LoadDataGridView();
             }
         }
@@ -304,6 +304,8 @@ namespace quanLyKinhDoanh
             str = "Select TenNhanVien from tblNhanVien where MaNhanVien =N'" + cboMaNhanVien.SelectedValue + "'";
             txtTenNhanVien.Text = Functions.GetFieldValues(str);
         }
+
+
 
         private void cboMaHang_TextChanged(object sender, EventArgs e)
         {
@@ -448,7 +450,7 @@ namespace quanLyKinhDoanh
             exRange.Range["A1:F1"].Font.Bold = true;
             exRange.Range["A1:F1"].Font.Italic = true;
             exRange.Range["A1:F1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignRight;
-            exRange.Range["A1:F1"].Value = "Bằng chữ: " + Functions.ChuyenSoSangChu(tblThongtinHD.Rows[0][2].ToString());
+            exRange.Range["A1:F1"].Value = "Bằng chữ: " + Functions.ChuyenSoSangChuoi(double.Parse(tblThongtinHD.Rows[0][2].ToString()));
             exRange = exSheet.Cells[4][hang + 17]; //Ô A1 
             exRange.Range["A1:C1"].MergeCells = true;
             exRange.Range["A1:C1"].Font.Italic = true;
@@ -483,7 +485,37 @@ namespace quanLyKinhDoanh
                 e.Handled = true;
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cboMaHDBan.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn một mã hóa đơn để tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cboMaHDBan.Focus();
+                return;
+            }
+            txtMaHDBan.Text = cboMaHDBan.Text;
+            LoadInfoHoaDon();
+            LoadDataGridView();
+            btnXoa.Enabled = true;
+            btnLuu.Enabled = true;
+            btnInHoaDon.Enabled = true;
+            cboMaHDBan.SelectedIndex = -1;
+        }
 
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void cboMaHDBan_DropDown(object sender, EventArgs e)
+        {
+            Functions.FillCombo("SELECT MaHDBan FROM tblHDBan", cboMaHDBan, "MaHDBan", "MaHDBan");
+            cboMaHDBan.SelectedIndex = -1;
+        }
+
+        private void frmHoaDonBan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ResetValues();
+        }
     }
 }

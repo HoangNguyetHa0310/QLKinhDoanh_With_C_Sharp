@@ -24,7 +24,7 @@ namespace quanLyKinhDoanh
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            txtMaNhanVien.Enabled = true;
+            txtMaNhanVien.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
             LoadDataGridView();
@@ -33,13 +33,13 @@ namespace quanLyKinhDoanh
         public void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT maNhanVien,tenNhanVien,diaChi,gioiTinh,dienThoai,ngaySinh FROM tblNhanVien";
+            sql = "SELECT MaNhanVien,TenNhanVien,GioiTinh,DiaChi,DienThoai,NgaySinh FROm tblNhanVien";
             tblNV = Functions.GetDataToTable(sql); //lấy dữ liệu
             dgvNhanVien.DataSource = tblNV;
             dgvNhanVien.Columns[0].HeaderText = "Mã nhân viên";
             dgvNhanVien.Columns[1].HeaderText = "Tên nhân viên";
-            dgvNhanVien.Columns[2].HeaderText = "Giới Tính";
-            dgvNhanVien.Columns[3].HeaderText = "Địa Chỉ ";
+            dgvNhanVien.Columns[2].HeaderText = "Giới tính";
+            dgvNhanVien.Columns[3].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[4].HeaderText = "Điện thoại";
             dgvNhanVien.Columns[5].HeaderText = "Ngày sinh";
             dgvNhanVien.Columns[0].Width = 100;
@@ -52,7 +52,7 @@ namespace quanLyKinhDoanh
             dgvNhanVien.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
-        private void frmNhanVien_Click(object sender, EventArgs e)
+        private void dgvNhanVien_Click(object sender, EventArgs e)
         {
             if (btnThem.Enabled == false)
             {
@@ -67,21 +67,17 @@ namespace quanLyKinhDoanh
             }
             txtMaNhanVien.Text = dgvNhanVien.CurrentRow.Cells["MaNhanVien"].Value.ToString();
             txtTenNhanVien.Text = dgvNhanVien.CurrentRow.Cells["TenNhanVien"].Value.ToString();
-            if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
-            {
-                chkGioiTinh.Checked = true;
-            }
-            else
-            {
-                chkGioiTinh.Checked = false;
-            }
+            if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam") chkGioiTinh.Checked = true;
+            else chkGioiTinh.Checked = false;
             txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells["DiaChi"].Value.ToString();
             mtbDienThoai.Text = dgvNhanVien.CurrentRow.Cells["DienThoai"].Value.ToString();
-            dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value.ToString();
+            dtpNgaySinh.Value = (DateTime)dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnXoa.Enabled = true;
         }
+
+       
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -100,14 +96,14 @@ namespace quanLyKinhDoanh
             txtTenNhanVien.Text = "";
             chkGioiTinh.Checked = false;
             txtDiaChi.Text = "";
-            dtpNgaySinh.Text = "";
+            dtpNgaySinh.Value = DateTime.Now;
             mtbDienThoai.Text = "";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql, gt;
-            if (txtMaNhanVien.Text.Trim().Length == 0)
+            if (txtMaNhanVien.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMaNhanVien.Focus();
@@ -131,18 +127,12 @@ namespace quanLyKinhDoanh
                 mtbDienThoai.Focus();
                 return;
             }
-            if (dtpNgaySinh.Text == "  /  /")
-            {
-                MessageBox.Show("Bạn phải nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpNgaySinh.Focus();
-                return;
-            }
             
             if (chkGioiTinh.Checked == true)
                 gt = "Nam";
             else
                 gt = "Nữ";
-            sql = "SELECT maNhanVien FROM tblNhanVien WHERE maNhanVien=N'" + txtMaNhanVien.Text.Trim() + "'";
+            sql = "SELECT MaNhanVien FROM tblNhanVien WHERE MaNhanVien=N'" + txtMaNhanVien.Text.Trim() + "'";
             if (Functions.CheckKey(sql))
             {
                 MessageBox.Show("Mã nhân viên này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -150,7 +140,8 @@ namespace quanLyKinhDoanh
                 txtMaNhanVien.Text = "";
                 return;
             }
-            sql = "INSERT INTO tblNhanVien(maNhanVien,tenNhanVien,diaChi,gioiTinh,dienThoai,ngaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + mtbDienThoai.Text + "','" + dtpNgaySinh.Value + "')";
+            sql = "INSERT INTO tblNhanVien(MaNhanVien,TenNhanVien,GioiTinh, DiaChi,DienThoai, NgaySinh)" +
+                " VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + mtbDienThoai.Text + "','" + dtpNgaySinh.Value + "')";
             Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
@@ -193,24 +184,18 @@ namespace quanLyKinhDoanh
                 mtbDienThoai.Focus();
                 return;
             }
-            if (dtpNgaySinh.Text == "  /  /")
-            {
-                MessageBox.Show("Bạn phải nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpNgaySinh.Focus();
-                return;
-            }
-           
+            
             if (chkGioiTinh.Checked == true)
                 gt = "Nam";
             else
                 gt = "Nữ";
-            sql = "UPDATE tblNhanVien SET  tenNhanVien=N'" + txtTenNhanVien.Text.Trim().ToString() +
-                    "',diaChi=N'" + txtDiaChi.Text.Trim().ToString() +
-                    "',dienThoai='" + mtbDienThoai.Text.ToString() + "',gioiTinh=N'" + gt +
-                    "',ngaySinh='" + dtpNgaySinh.Value +
-                    "' WHERE maNhanVien=N'" + txtMaNhanVien.Text + "'";
+            sql = "UPDATE tblNhanVien SET  TenNhanVien=N'" + txtTenNhanVien.Text.Trim().ToString() +
+                    "',DiaChi=N'" + txtDiaChi.Text.Trim().ToString() +
+                    "',DienThoai='" + mtbDienThoai.Text.ToString() + "',GioiTinh=N'" + gt +
+                    "',NgaySinh='" + dtpNgaySinh.Value +
+                    "' WHERE MaNhanVien=N'" + txtMaNhanVien.Text + "'";
             Functions.RunSQL(sql);
-            LoadDataGridView(); 
+            LoadDataGridView();
             ResetValues();
             btnBoqua.Enabled = false;
         }
@@ -259,5 +244,7 @@ namespace quanLyKinhDoanh
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
         }
+
+       
     }
 }

@@ -73,6 +73,16 @@ namespace quanLyKinhDoanh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ảnh_frm_đăng_nhập {
+            get {
+                object obj = ResourceManager.GetObject("ảnh frm đăng nhập", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anhBackGroundFormMain {
             get {
                 object obj = ResourceManager.GetObject("anhBackGroundFormMain", resourceCulture);

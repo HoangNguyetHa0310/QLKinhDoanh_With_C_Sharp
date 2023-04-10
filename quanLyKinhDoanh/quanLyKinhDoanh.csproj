@@ -148,6 +148,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,6 +170,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>quanLyKinhDoanh.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\ảnh frm đăng nhập.jpg" />
     <None Include="Resources\anhBackGroundFormMain.png" />
     <None Include="Resources\ảnh 1.jpg" />
   </ItemGroup>

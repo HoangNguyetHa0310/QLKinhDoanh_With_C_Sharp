@@ -110,6 +110,7 @@ namespace quanLyKinhDoanh
             this.btnTimKiem.TabIndex = 1;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cboMaHDBan
             // 
@@ -118,6 +119,7 @@ namespace quanLyKinhDoanh
             this.cboMaHDBan.Name = "cboMaHDBan";
             this.cboMaHDBan.Size = new System.Drawing.Size(235, 21);
             this.cboMaHDBan.TabIndex = 0;
+            this.cboMaHDBan.DropDown += new System.EventHandler(this.cboMaHDBan_DropDown);
             // 
             // label1
             // 
@@ -572,6 +574,7 @@ namespace quanLyKinhDoanh
             this.btnDong.TabIndex = 4;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLuu
             // 
@@ -601,6 +604,7 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel2);
             this.Name = "frmHoaDonBan";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDonBan_FormClosing);
             this.Load += new System.EventHandler(this.frmHoaDonBan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

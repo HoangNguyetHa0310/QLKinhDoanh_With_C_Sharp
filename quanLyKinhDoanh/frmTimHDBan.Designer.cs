@@ -75,6 +75,7 @@
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "&Tìm Kiếm ";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnTimLai
             // 
@@ -85,6 +86,7 @@
             this.btnTimLai.TabIndex = 7;
             this.btnTimLai.Text = "&Tìm Lại ";
             this.btnTimLai.UseVisualStyleBackColor = true;
+            this.btnTimLai.Click += new System.EventHandler(this.btnTimLai_Click);
             // 
             // btnDong
             // 
@@ -95,6 +97,7 @@
             this.btnDong.TabIndex = 8;
             this.btnDong.Text = "&Đóng ";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // panel2
             // 
@@ -160,6 +163,7 @@
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(227, 22);
             this.txtTongTien.TabIndex = 2;
+            this.txtTongTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTongTien_KeyPress);
             // 
             // txtMaKhach
             // 
@@ -168,7 +172,6 @@
             this.txtMaKhach.Name = "txtMaKhach";
             this.txtMaKhach.Size = new System.Drawing.Size(227, 22);
             this.txtMaKhach.TabIndex = 2;
-            this.txtMaKhach.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtMaNhanVien
             // 
@@ -265,6 +268,7 @@
             this.dgvTKHoaDon.Name = "dgvTKHoaDon";
             this.dgvTKHoaDon.Size = new System.Drawing.Size(1283, 312);
             this.dgvTKHoaDon.TabIndex = 3;
+            this.dgvTKHoaDon.DoubleClick += new System.EventHandler(this.dgvTKHoaDon_DoubleClick);
             // 
             // frmTimHDBan
             // 
@@ -277,6 +281,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmTimHDBan";
             this.Text = "Tìm kiếm hóa đơn ";
+            this.Load += new System.EventHandler(this.frmTimHDBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

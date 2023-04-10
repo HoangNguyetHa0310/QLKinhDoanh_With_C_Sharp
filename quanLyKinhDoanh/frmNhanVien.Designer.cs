@@ -286,6 +286,7 @@ namespace quanLyKinhDoanh
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.Size = new System.Drawing.Size(1207, 339);
             this.dgvNhanVien.TabIndex = 1;
+            this.dgvNhanVien.Click += new System.EventHandler(this.dgvNhanVien_Click);
             // 
             // frmNhanVien
             // 
@@ -298,7 +299,6 @@ namespace quanLyKinhDoanh
             this.Name = "frmNhanVien";
             this.Text = "DANH MỤC NHÂN VIÊN ";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
-            this.Click += new System.EventHandler(this.frmNhanVien_Click);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

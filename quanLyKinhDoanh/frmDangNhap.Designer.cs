@@ -55,6 +55,7 @@ namespace quanLyKinhDoanh
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::quanLyKinhDoanh.Properties.Resources.ảnh_frm_đăng_nhập;
             this.panel1.Controls.Add(this.chkShow);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnLogin);
@@ -101,6 +102,7 @@ namespace quanLyKinhDoanh
             this.btnLogin.TabIndex = 14;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
