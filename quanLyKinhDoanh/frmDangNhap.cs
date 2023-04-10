@@ -46,8 +46,10 @@ namespace quanLyKinhDoanh
             }
             catch(Exception ex )
             {
-                MessageBox.Show("Đang kết nối  !");
+                MessageBox.Show("Đang kết nối . Hãy nhấn OK để tiếp tục !");
             }
+
+
 
             frmMain frm = new frmMain();
             frm.Show();
