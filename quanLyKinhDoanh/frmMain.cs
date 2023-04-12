@@ -83,6 +83,11 @@ namespace quanLyKinhDoanh
             frmKhachHang frm = new frmKhachHang();
             frm.ShowDialog();
         }
+
+        private void mnuBCHangTon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

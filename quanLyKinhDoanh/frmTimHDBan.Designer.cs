@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTKHoaDon = new System.Windows.Forms.DataGridView();
+            this.btnInHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnInHoaDon);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnTimLai);
             this.panel1.Controls.Add(this.btnDong);
@@ -69,7 +71,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(324, 22);
+            this.btnTimKiem.Location = new System.Drawing.Point(251, 22);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(105, 46);
             this.btnTimKiem.TabIndex = 6;
@@ -80,7 +82,7 @@
             // btnTimLai
             // 
             this.btnTimLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimLai.Location = new System.Drawing.Point(591, 22);
+            this.btnTimLai.Location = new System.Drawing.Point(490, 22);
             this.btnTimLai.Name = "btnTimLai";
             this.btnTimLai.Size = new System.Drawing.Size(105, 46);
             this.btnTimLai.TabIndex = 7;
@@ -91,7 +93,7 @@
             // btnDong
             // 
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(878, 22);
+            this.btnDong.Location = new System.Drawing.Point(737, 22);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(105, 46);
             this.btnDong.TabIndex = 8;
@@ -270,6 +272,17 @@
             this.dgvTKHoaDon.TabIndex = 3;
             this.dgvTKHoaDon.DoubleClick += new System.EventHandler(this.dgvTKHoaDon_DoubleClick);
             // 
+            // btnInHoaDon
+            // 
+            this.btnInHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHoaDon.Location = new System.Drawing.Point(961, 22);
+            this.btnInHoaDon.Name = "btnInHoaDon";
+            this.btnInHoaDon.Size = new System.Drawing.Size(105, 46);
+            this.btnInHoaDon.TabIndex = 9;
+            this.btnInHoaDon.Text = "In Hóa Đơn ";
+            this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            // 
             // frmTimHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,5 +328,6 @@
         private System.Windows.Forms.TextBox txtMaKhach;
         private System.Windows.Forms.TextBox txtMaNhanVien;
         private System.Windows.Forms.TextBox txtMaHDBan;
+        private System.Windows.Forms.Button btnInHoaDon;
     }
 }

@@ -48,6 +48,36 @@ namespace quanLyKinhDoanh.Class
             }
          }
 
+        // lấy bảng 
+        public DataTable bangDuLieu = new DataTable();
+        public DataTable laybang (string caulenh)
+        {
+            try
+            {
+                Connect();
+                SqlDataAdapter Adapter = new SqlDataAdapter(caulenh, con);
+                DataSet ds = new DataSet();
+
+                Adapter.Fill(bangDuLieu);
+            }
+            catch (System.Exception)
+            {
+                bangDuLieu = null;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+            return bangDuLieu;
+
+        }
+
+
+
+
+
+
         // phuong thuc thực thi câu lênh 
 
         public static DataTable GetDataToTable (string sql) 

@@ -118,5 +118,15 @@ namespace quanLyKinhDoanh
         {
             this.Close();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            if (txtMaHDBan.Text != "")
+            {
+                inHoaDonBanHang frm = new inHoaDonBanHang(Convert.ToInt32(txtMaHDBan.Text));
+                frm.ShowDialog();
+            }
+
+        }
     }
 }

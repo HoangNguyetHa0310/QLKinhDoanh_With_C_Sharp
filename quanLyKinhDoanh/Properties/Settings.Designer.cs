@@ -44,5 +44,15 @@ namespace quanLyKinhDoanh.Properties {
                 return ((string)(this["QLKinhDoanhConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN;Initial Catalog=quanLyKinhDoanh2;Integrated Security=True")]
+        public string quanLyKinhDoanh2ConnectionString {
+            get {
+                return ((string)(this["quanLyKinhDoanh2ConnectionString"]));
+            }
+        }
     }
 }

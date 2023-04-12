@@ -201,6 +201,7 @@ namespace quanLyKinhDoanh
             this.mnuBCHangTon.Name = "mnuBCHangTon";
             this.mnuBCHangTon.Size = new System.Drawing.Size(185, 34);
             this.mnuBCHangTon.Text = "&Hàng tồn ";
+            this.mnuBCHangTon.Click += new System.EventHandler(this.mnuBCHangTon_Click);
             // 
             // mnuBCDoanhThu
             // 

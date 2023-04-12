@@ -160,6 +160,7 @@ namespace quanLyKinhDoanh
             this.Controls.Add(this.label4);
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập ";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

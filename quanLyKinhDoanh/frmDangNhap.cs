@@ -62,8 +62,9 @@ namespace quanLyKinhDoanh
             this.Close();
         }
 
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
