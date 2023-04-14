@@ -144,7 +144,7 @@ namespace quanLyKinhDoanh
                     return;
                 }
                 sql = "INSERT INTO tblHDBan(MaHDBan, NgayBan, MaNhanVien, MaKhach, TongTien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
-                        txtNgayBan.Value + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
+                        txtNgayBan.Value.ToString("MM/dd/yyyy hh:mm:ss") + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
                         cboMaKhach.SelectedValue + "'," + txtTongTien.Text + ")";
                 Functions.RunSQL(sql);
             }
@@ -193,7 +193,9 @@ namespace quanLyKinhDoanh
             sql = "UPDATE tblHang SET SoLuong =" + SLcon + " WHERE MaHang= N'" + cboMaHang.SelectedValue + "'";
             Functions.RunSQL(sql);
             // Cập nhật lại tổng tiền cho hóa đơn bán
-            tong = Convert.ToDouble(Functions.GetFieldValues("SELECT TongTien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'"));
+            var TongTien = Functions.GetFieldValues("SELECT TongTien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'");
+            
+            tong = Convert.ToDouble(TongTien);
             Tongmoi = tong + Convert.ToDouble(txtThanhTien.Text);
             sql = "UPDATE tblHDBan SET TongTien =" + Tongmoi + " WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             Functions.RunSQL(sql);
@@ -516,6 +518,11 @@ namespace quanLyKinhDoanh
         private void frmHoaDonBan_FormClosing(object sender, FormClosingEventArgs e)
         {
             ResetValues();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

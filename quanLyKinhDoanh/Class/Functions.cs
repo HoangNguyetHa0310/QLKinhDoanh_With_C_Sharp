@@ -17,10 +17,10 @@ namespace quanLyKinhDoanh.Class
         public static void Connect()
         {
             // con = new SqlConnection();
-            string connectString = @"Data Source=ADMIN;Initial Catalog=quanLyKinhDoanh2;Integrated Security=True";  
+            string connectString = @"Data Source=ADMIN;Initial Catalog=quanLyKinhDoanh2;Integrated Security=True";
             con = new SqlConnection(connectString);
-            
-            
+
+
             // kiểm tra phươn thức kết nối 
 
             if (con.State != ConnectionState.Open)
@@ -33,24 +33,24 @@ namespace quanLyKinhDoanh.Class
             {
                 MessageBox.Show("Kết nối không thành công ! ");
             }
-            
- 
+
+
 
         }
         //  Dừng việc kết nối 
-        public static void Disconnect ()
-         {
+        public static void Disconnect()
+        {
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
                 con.Dispose();
                 con = null;
             }
-         }
+        }
 
         // lấy bảng 
         public DataTable bangDuLieu = new DataTable();
-        public DataTable laybang (string caulenh)
+        public DataTable laybang(string caulenh)
         {
             try
             {
@@ -80,17 +80,17 @@ namespace quanLyKinhDoanh.Class
 
         // phuong thuc thực thi câu lênh 
 
-        public static DataTable GetDataToTable (string sql) 
+        public static DataTable GetDataToTable(string sql)
         {
             DataTable table = new DataTable();
-            SqlDataAdapter dap = new SqlDataAdapter(sql , con);
+            SqlDataAdapter dap = new SqlDataAdapter(sql, con);
             dap.Fill(table);
             return table;
         }
 
         // phương thức thực thi câu lệnh ísnert  
 
-        public static void RunSQL (string sql)
+        public static void RunSQL(string sql)
         {
             SqlCommand cmd;
             cmd = new SqlCommand();
@@ -109,7 +109,7 @@ namespace quanLyKinhDoanh.Class
         }
 
         // ham kiem tra 
-        public static bool CheckKey (string sql)
+        public static bool CheckKey(string sql)
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, con);
             DataTable table = new DataTable();
@@ -118,7 +118,8 @@ namespace quanLyKinhDoanh.Class
             {
                 return true;
 
-            }else
+            }
+            else
             {
                 return false;
             }
@@ -142,7 +143,7 @@ namespace quanLyKinhDoanh.Class
             SqlDataReader reader;
             reader = cmd.ExecuteReader();
             while (reader.Read())
-            ma = reader.GetValue(0).ToString();
+                ma = reader.GetValue(0).ToString();
             reader.Close();
             return ma;
         }
